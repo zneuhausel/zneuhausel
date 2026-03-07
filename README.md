@@ -29,39 +29,5 @@
 
 
 
-# 📁 Projects
-
----
-
-## 🏥 Field Hospital Optimization — COVID-19 Response Planning
-**Type:** Collegiate | **Tools:** Python, Pyomo, Pandas, Google Colab
-
-### 🔍 Business Problem
-A Canadian company based in Marystown, Newfoundland was contracted to produce field hospitals during the COVID-19 pandemic. With limited labor across three departments (A, B, and C) and only 50 employees available over an 8-week window, the company needed to determine:
-- How many **small** (50-patient) vs. **large** (300-patient) hospitals to build
-- How to **optimally assign employees** to departments to maximize patient capacity
-- All while respecting mix constraints: at least 20% small hospitals, at least 60% large hospitals
-
-### 🛠️ What I Did
-Built a full **Integer Programming (IP) optimization model** from scratch using Python and Pyomo:
-- Loaded and structured real input data from Excel using Pandas
-- Formulated decision variables for both hospital counts and employee-department assignments
-- Defined a patient-maximization objective function (non-monetary)
-- Encoded all business constraints: labor hour limits, hospital mix ratios, and employee eligibility rules
-- Solved using the HiGHS solver and validated the optimal solution
-
-### ⚠️ Challenges
-- Shifting from a cost-minimization mindset to a **patient-maximization** objective required rethinking the model structure
-- Modeling **flexible employees** (those eligible for multiple departments) required a two-dimensional variable and careful constraint logic to ensure every employee was fully assigned
-- Ensuring integer (whole number) solutions while meeting all constraints simultaneously
-
-### 📊 Results & Business Impact
-The model returned an optimal solution of **29,900 patients served**, recommending:
-- **95 large hospitals** and **28 small hospitals** built
-- All 50 employees fully assigned to their eligible departments with zero waste
-- The mix constraints satisfied — ensuring both operational efficiency and contractual compliance
-
-This analysis gives the company a **data-driven deployment plan** that maximizes healthcare reach during a crisis, supporting faster and more equitable COVID-19 response.
-
 ### 🔗 Artifacts
 - 📓 [View Notebook on GitHub](#your-repo-link-here)
